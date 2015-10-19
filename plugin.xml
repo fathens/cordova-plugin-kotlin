@@ -6,12 +6,10 @@
 	
 	<engines>
 	   <engine name="cordova-android" version=">=4.1.0" />
-	   <engine name="cordova-ios" version=">=3.9.0" />
     </engines>
 	
 	<platform name="android">
+        <hook type="after_plugin_install" src="platforms/android/hooks/after_plugin_install.js"/>
+        <hook type="before_plugin_uninstall" src="platforms/android/hooks/before_plugin_uninstall.js"/>
 	</platform>
-	
-    <platform name="ios">
-    </platform>
 </plugin>
