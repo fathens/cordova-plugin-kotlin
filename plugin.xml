@@ -6,12 +6,8 @@
 	
 	<engines>
 	   <engine name="cordova-android" version=">=4.1.0" />
-	   <engine name="cordova-ios" version=">=3.9.0" />
     </engines>
 	
 	<platform name="android">
 	</platform>
-	
-    <platform name="ios">
-    </platform>
 </plugin>
