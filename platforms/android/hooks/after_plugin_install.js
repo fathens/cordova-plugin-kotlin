@@ -24,7 +24,7 @@ module.exports = function(context) {
 		var indent = (first && first.length > 0) ? first[0] : '';
 		return indent + content;
 	}
-	
+
 	var build_gradle = function(next) {
 		var target = path.join(platformDir, 'build.gradle');
 		log("Editing ", target);
@@ -44,14 +44,14 @@ module.exports = function(context) {
 						var result = [line];
 						var adding;
 						if (cond.compile === 1) {
-							adding = "compile 'org.jetbrains.kotlin:kotlin-stdlib:0.14.449'";
+							adding = "compile 'org.jetbrains.kotlin:kotlin-stdlib:1.+'";
 							cond.compile = 0;
 						}
 						if (cond.classpath === 0) {
 							var found = line.match(/classpath 'com\.android\.tools\.build:gradle:1\.0\.0\+'/);
 							if (found && found.length > 0) {
 								result[0] = line.replace(/1\.0\.0/, '1.1.0');
-								adding = "classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:0.14.449'";
+								adding = "classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.+'";
 								cond.classpath = 1;
 							}
 						}
@@ -78,7 +78,7 @@ module.exports = function(context) {
 				}
 				 ], next);
 	}
-	
+
 	var main = function() {
 		async.parallel(
 				[
