@@ -3,13 +3,12 @@
 	<name>Crashlytics</name>
 	<description>Cordova Plugin for Kotlin</description>
 	<license>MIT</license>
-	
+
 	<engines>
 	   <engine name="cordova-android" version=">=4.1.0" />
     </engines>
-	
+
 	<platform name="android">
         <hook type="after_plugin_install" src="platforms/android/hooks/after_plugin_install.js"/>
-        <hook type="before_plugin_uninstall" src="platforms/android/hooks/before_plugin_uninstall.js"/>
 	</platform>
 </plugin>
