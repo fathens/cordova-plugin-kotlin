@@ -1,4 +1,4 @@
-require 'cordova_plugin_kotlin/gradle_file'
+require_relative 'cordova_plugin_kotlin/gradle_file'
 
 def log(msg)
     puts msg
