@@ -5,7 +5,8 @@ def write_build_gradle(target_file, cordova_srcdir, base_dir = nil)
     mk_path = lambda { |p|
         p.relative_path_from base_dir
     }
-    log_header "Writing #{target_file.basename} on #{base_dir}"
+    log_header "Writing #{target_file}"
+    log " on #{base_dir}"
 
     File.open(target_file, 'w') { |dst|
         dst.puts <<~EOF
@@ -58,7 +59,8 @@ class PluginGradle
         mk_path = lambda { |p|
             p.relative_path_from base_dir
         }
-        log_header "Writing #{target_file.basename} on #{base_dir}"
+        log_header "Writing #{target_file}"
+        log " on #{base_dir}"
 
         files_line = @jar_files.map { |x|
             "'#{mk_path.call(x)}'"
