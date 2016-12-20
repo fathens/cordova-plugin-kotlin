@@ -9,6 +9,6 @@
     </engines>
 
 	<platform name="android">
-        <hook type="after_plugin_install" src="platforms/android/hooks/after_plugin_install.js"/>
+        <hook type="after_plugin_install" src="platforms/android/hooks/after_plugin_install.rb"/>
 	</platform>
 </plugin>
