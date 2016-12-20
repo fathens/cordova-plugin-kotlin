@@ -15,6 +15,5 @@ Gem::Specification.new do |s|
   s.email    = "devel@fathens.org"
   s.homepage = "http://fathens.org"
 
-  s.files        = Dir["gemlib/**/*"]
-  s.require_path = "gemlib"
+  s.files        = Dir["lib/**/*"]
 end
