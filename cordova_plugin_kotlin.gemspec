@@ -17,6 +17,8 @@ Gem::Specification.new do |s|
 
     s.files        = Dir["lib/**/*"]
 
+    s.add_runtime_dependency 'fetch_local_lib', :git => "https://github.com/fathens/fetch_local_lib.git"
+
     s.add_development_dependency "bundler", "~> 1.13"
     s.add_development_dependency "rake", "~> 10.0"
     s.add_development_dependency "rspec", "~> 3.0"

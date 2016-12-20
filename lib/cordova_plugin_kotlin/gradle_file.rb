@@ -1,7 +1,11 @@
 require 'pathname'
+require 'fetch_local_lib'
 
-def write_build_gradle(target_file, cordova_srcdir, base_dir = nil)
+def write_build_gradle(target_file, base_dir = nil)
     base_dir ||= target_file.dirname
+
+    cordova_srcdir = FetchLocalLib::Repo.github(base_dir, 'apache/cordova-android').git_clone/'framework'/'src'
+
     mk_path = lambda { |p|
         p.relative_path_from base_dir
     }
