@@ -63,7 +63,7 @@ class PluginGradle
         }
 
         files_line = @jar_files.map { |x|
-            "'#{mk_path(x)}'"
+            "'#{mk_path.call(x)}'"
         }.join(', ')
 
         File.open(target_file, 'w') { |dst|
