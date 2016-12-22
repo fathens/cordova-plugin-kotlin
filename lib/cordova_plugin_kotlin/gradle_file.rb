@@ -4,7 +4,8 @@ require 'fetch_local_lib'
 def write_build_gradle(target_file, base_dir = nil)
     base_dir ||= target_file.dirname
 
-    (base_dir/'src'/'main'/'res').mkdir
+    res_dir = base_dir/'src'/'main'/'res'
+    res_dir.mkdir unless res_dir.exist?
 
     cordova_srcdir = FetchLocalLib::Repo.github(base_dir, 'apache/cordova-android').git_clone/'framework'/'src'
 
