@@ -6,7 +6,7 @@ module Kotlin
         base_dir ||= target_file.dirname
 
         res_dir = base_dir/'src'/'main'/'res'
-        res_dir.mkdir unless res_dir.exist?
+        res_dir.mkpath unless res_dir.exist?
 
         cordova_srcdir = FetchLocalLib::Repo.github(base_dir, 'apache/cordova-android').git_clone/'framework'/'src'
 
