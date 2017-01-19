@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'pathname'
-require_relative '../../../lib/cordova_plugin_kotlin'
 
 def rewrite_gradle(file_src)
     file_dst = "#{file_src}.tmp"
