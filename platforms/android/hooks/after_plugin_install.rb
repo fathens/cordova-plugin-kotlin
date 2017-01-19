@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'pathname'
-require 'fetch_local_lib'
 require_relative '../../../lib/cordova_plugin_kotlin'
 
 def rewrite_gradle(file_src)
